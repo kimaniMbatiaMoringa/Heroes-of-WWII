@@ -26,6 +26,6 @@ Deliverables:
 
 2. Launch terminal within folder and type "json-server --watch db.json to start local json server
 
-3. Open index.html
+3. Open index.html and view articles
 
 
