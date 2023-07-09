@@ -9,7 +9,7 @@ const init = () =>{
     })
 
     let submitButton = document.getElementById('submitArticle')
-    
+    //
     submitButton.addEventListener('click', function(){
         alert("submit button clicked")
         event.preventDefault()
