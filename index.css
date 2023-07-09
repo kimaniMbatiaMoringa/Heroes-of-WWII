@@ -1,0 +1,44 @@
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
+@font-face {
+    font-family: "Bahnschrift"; 
+    src: url(assets/BAHNSCHRIFT.TTF)
+}
+
+#articleClassname{
+
+  background-color: black;
+  height: 150px;
+  padding:20px
+  
+}
+
+#navBar{
+	background-color: white;
+	padding: 5px;
+  font-family: "Bahnschrift";
+  
+}
+
+
+
+h3 {
+    color: white;
+    font-family: "Bahnschrift";
+    /*border-bottom: 3px solid white;*/
+  }
+
+  h4 {
+    color: white;
+    font-family: "Bahnschrift";
+  }
+
+  #border-bottom{
+    bottom: 30%
+  }
+
+  p {
+    color: white;
+    font-family: "Bahnschrift";
+  }
+

@@ -1,0 +1,43 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "mainTitle": "Funding & Supplying War",
+      "creator": "Kimani Mbatia",
+      "creationDate": "05 July 2023",
+      "mainPoints": [
+        {
+          "title": "Autarky",
+          "staticImage": "./assets/images/autarky.svg",
+          "simplePoint": "When you fight a war, you cannot buy materials from your enemy. Hence you have to make almost everything you need. this policy is known as Autarky. Talk here about how the German government got people to eat less meat and eat more fish to save on imports",
+          "animatedInfoGraphic": ""
+        },
+        {
+          "title": "Government Bonds",
+          "staticImage": "./assets/images/moneyWhite.svg",
+          "simplePoint": "How does a broke government fund a war? Talk about MEFO bills, how German government, cash strapped, induced companies to do business and supply a shell metalworks company and got paid bakc in bills rather than cash and how, because the company was connected to renouned organisations, they could endlessly defer payments to later dates",
+          "animatedInfoGraphic": ""
+        },
+        {
+          "title": "Work on the Cheap",
+          "staticImage": "./assets/images/workerWhite.svg",
+          "simplePoint": "Talks about how the MEFO bills paid for rearmament and how this led to massive job creation, but with a price: Low Wages and No effective Unions, and how the sudden appearance of jobs contributed to Regime stability",
+          "animatedInfoGraphic": "./assets/images/Asset 1.svg"
+        }
+      ]
+    },
+    {
+      "mainTitle": "Kenyan Politics",
+      "creator": "Raila Odinga",
+      "creationDate": "9-6-2023",
+      "mainPoints": [
+        {
+          "title": "Corruption under Ruto",
+          "staticImage": "",
+          "simplePoint": "Finance Bill - Bought,"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}
