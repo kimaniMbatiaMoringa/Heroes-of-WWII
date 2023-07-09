@@ -1,7 +1,7 @@
 const init = () =>{
     
 
-    fetch('http://localhost:3000/articles')                                                                //Fetches the films in db.json
+    fetch('http://localhost:3000/articles')                                                                //Fetches the article objects in db.json
     .then(function(res){
         return res.json()
     })
@@ -27,9 +27,10 @@ const init = () =>{
         })
     })
 
-    /* 
-    
-    */
+    /************************************************************************************ 
+        Prints the content of the First article in the 'articleContainer' element
+    *************************************************************************************/
+
     function showArticle(){
         fetch(selectedArticle)                                                                         //Gets the selected url (See lines 46 and 51)
         .then(function(res){
@@ -135,32 +136,81 @@ const init = () =>{
 
     }
 
-    let selectedArticle = `http://localhost:3000/articles/${1}`;
+    let selectedArticle = `http://localhost:3000/articles/${1}`;                                //Sets the default article to be shown on page load to be the one with "id:1"
     
     showArticle()
 
     let navBarContainer = document.getElementById('navBarRow')
 
     navBarContainer.addEventListener('click', (event)=>{
-        let articleId = event.target.id                                                         //Gets the id of the article selected (See line 23)
+        let articleId = event.target.id                                                        //Gets the id of the article selected (See line 23)
         //alert (articleId )
-        selectedArticle = `http://localhost:3000/articles/${articleId}`                        //Sets "selectedMovieURL" to match the id of the selected element (See line 77 for its use)                                  
-        clearArticle()                                                                        //Clears the firstMovieDisplay of its default values and adds that of the selected movie (See line 49 and)
+        selectedArticle = `http://localhost:3000/articles/${articleId}`                       //Sets "selectedMovieURL" to match the id of the selected element (See line 77 for its use)                                  
+        clearArticle()                                                                        //Calls the function that clears the articleContainer of its default values
         showArticle()                                                                             
     })
+
+    /*************************************************************************************
+        Clears the articleContainer of its default values
+    **************************************************************************************/
 
     function clearArticle(){
         let article = document.getElementById('articleArea');
         article.innerHTML = "";
     }
 
-/*     function clearFirstMovieDisplay(){
-        let firstMovieDisplay =document.getElementById('firstMovieDisplay')
-        firstMovieDisplay.innerHTML=''
-     } */
-
     $(function(){
         AOS.init();
+    })
+
+    let submitButton = document.getElementById('submitArticle')
+    
+    submitButton.addEventListener('click', function(){
+        alert("submit button clicked")
+        event.preventDefault()
+        let newArticleName= document.getElementById('articleNameInput').value
+        let newArticleCreatorName= document.getElementById('articleCreatorInput').value
+        let newArticleFirstHeading = document.getElementById('articleHeadingInput1').value
+        let newArticleFirstHeadingContent = document.getElementById('articleHeadingInput1Content').value
+
+        alert(newArticleName+ " is about to be posted")
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+        let currentDate =`${day}-${month}-${year}`;
+
+        let newArticle = {
+            "mainTitle": newArticleName,
+            "creator" : newArticleCreatorName,
+            "creationDate" : currentDate,
+            "mainPoints":[
+                {
+                    "title": newArticleFirstHeading,
+                    "staticImage": "",
+                    "simplePoint": newArticleFirstHeadingContent
+                }
+
+            ]
+
+        }
+
+        const patchConfigurationObject ={
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(newArticle)
+        }
+
+        fetch("http://localhost:3000/articles", patchConfigurationObject)
+            .then(function (res){
+                return res.json()
+            })
+            .then(function (object){
+                console.log(object)
+            })
     })
     
 }
