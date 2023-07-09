@@ -1,4 +1,3 @@
-A well documented Readme file on Github A project README that includes: - project or program name - author name - description of project - project setup instructions - link to live site on GitHub Pages - copyright and license information
 
 # Heroes of WWII - An Educational Tool (And Template) for the next generation
 
