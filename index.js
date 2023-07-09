@@ -85,6 +85,8 @@ const init = () =>{
                 mainpointImageContainer.style.marginLeft ="5%"
                 //mainpointImageContainer.style.border = "3px solid white"
                 let mainpointImageDisplay = document.createElement('img')
+                mainpointImageDisplay.style.width = "500px";
+                mainpointImageDisplay.style.height = "500px"
                 mainpointImageDisplay.src = staticImage;
 
                 mainpointImageContainer.append(mainpointImageDisplay)
