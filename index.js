@@ -65,11 +65,7 @@ const init = () =>{
                 mainPointContainer.style.borderBottom = "3px solid white"
                 row1 = document.createElement('div');
                 row1.className = 'row'
-                
-                //let mainPointTitleDisplayContainer = document.createElement('div');
-                //mainPointTitleDisplayContainer.className = 'container'
-               
-                //mainPointTitleDisplayContainer.append(mainPointTitleDisplay)
+            
 
                 let column1 = document.createElement('div');
                 column1.className = 'col-md-4'
@@ -97,8 +93,7 @@ const init = () =>{
                 simplePointTextContainer.style.height = "200px"
                 simplePointTextContainer.style.alignContent ="center"
                 simplePointTextContainer.style.marginTop ="15%"
-                //simplePointTextContainer.setAttribute("data-aos","fade-up")
-                //simplePointTextContainer.style.border = "3px solid white"
+
 
                 let mainPointTitleDisplay = document.createElement('h4')
                 mainPointTitleDisplay.innerText = title;
@@ -147,9 +142,9 @@ const init = () =>{
     let navBarContainer = document.getElementById('navBarRow')
 
     navBarContainer.addEventListener('click', (event)=>{
-        let articleId = event.target.id                                                         //Gets the id of the element selected (See lines 31-33)
+        let articleId = event.target.id                                                         //Gets the id of the article selected (See line 23)
         //alert (articleId )
-        selectedArticle = `http://localhost:3000/articles/${articleId}`                                     //Sets "selectedMovieURL" to match the id of the selected element (See line 77 for its use)                                  
+        selectedArticle = `http://localhost:3000/articles/${articleId}`                        //Sets "selectedMovieURL" to match the id of the selected element (See line 77 for its use)                                  
         clearArticle()                                                                        //Clears the firstMovieDisplay of its default values and adds that of the selected movie (See line 49 and)
         showArticle()                                                                             
     })
