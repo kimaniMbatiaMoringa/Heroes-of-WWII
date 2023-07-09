@@ -167,11 +167,28 @@ const init = () =>{
 
     articleCreationTool.style.display = "none"
 
+    /*************************************************************************** 
+        Toggles the article creation tool when button is clicked
+    ****************************************************************************/
+
     let toggleArticleCreationTool = document.getElementById('toggleArticleCreationTool')
     
     toggleArticleCreationTool.addEventListener('click', function(){
         articleCreationTool.style.display = "block"
     })
+
+    /**************************************************************************** 
+        Hides the article creation tool when button is clicked
+    *****************************************************************************/
+
+        let closeTool = document.getElementById('closeTool')
+        closeTool.addEventListener('click', function(){
+            articleCreationTool.style.display = "none"
+        })
+
+    /**************************************************************************** 
+        Submits an article
+    *****************************************************************************/    
 
     let submitButton = document.getElementById('submitArticle')
     
