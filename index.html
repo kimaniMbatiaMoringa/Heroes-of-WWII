@@ -50,7 +50,7 @@
                 <label for="creator" style="color:white;font-family: Bahnschrift">Creator Name</label>
                 <input type="text" id="articleCreatorInput">
             </div>
-            <div class="container">
+<!--             <div class="container">
                 <h4>How Many Points do you want for your article?</h4>
                 <select name="cars" id="numberOfPoints">
                     <option value="1">1</option>
@@ -58,7 +58,7 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                   </select>
-            </div>
+            </div> -->
             <div class="container-fluid" style="padding:50px">
                 <div class="container" style="border: 3px solid white;">
                     <label for="mainPointsTitle" style="color:white;font-family: Bahnschrift">First Heading:</label>
@@ -71,26 +71,26 @@
                     <input type="file">
                 </div>
             </div>
-            <div class="container-fluid" style="padding:50px">
-                <div class="container">
-                    <label for="mainPointsTitle" style="color:white;font-family: Bahnschrift">First Heading</label>
-                    <input type="text">
-                </div>
-                <div class="container">
-                    <label for="simplePoint" style="color:white;font-family: Bahnschrift">Content </label>
-                    <input type="text" style="height:150px; width:500px;">
-                </div>
-                <div class="container">
-                    <label for="mainPointsTitle" style="color:white;font-family: Bahnschrift">Upload Relevant Image</label>
-                    <input type="file">
-                </div>
-            </div>
             <div class="container" style="padding:50px">
                 <button type="submit" id="submitArticle" style="color:white;font-family:Bahnschrift; font-size: 36px;border:5px solid white;text-align:center;background-color: black; width: 400px;">Submit Article</button>
                 <button type="button" id="closeTool" style="color:white;font-family:Bahnschrift; font-size: 36px;border:5px solid white;text-align:center;background-color: black; width: 400px;">Close Tool</button>
             </div>
     </div>
 </articleCreationTool>
+<forum class="container-fluid" id="forum">
+    <h1 style="color:black">General Forum</h1>
+   <div class="container-fluid">
+        <div class="container" style="height:300px">
+            <label for="userName" style="color:black;font-family: Bahnschrift;">User Name:</label>
+            <input type="text" id="userName">
+            <br>
+            <label for="postContent" style="color:black;font-family: Bahnschrift">Post content: </label>
+            <textarea class="longInput" id="postContent" cols="80" rows="5"></textarea>
+            <button type="submit" id="postButton" style="color:white;font-family:Bahnschrift; font-size: 36px;border:5px solid white;text-align:center;background-color: black; width: 400px;">Post to Forum</button>
+        </div> 
+</div>
+
+</forum>
 <footer class="container-fluid" style="height:300px;background-color: grey;position: relative;">
     <div class="container" style="position: absolute; bottom: 0; left:20%">
         <div class="row">
@@ -98,7 +98,7 @@
                 <button id="toggleArticleCreationTool" style="color:black;font-family:Bahnschrift; font-size: 36px;border:5px solid black;text-align:center;background-color: white; width: 400px;" onclick="showArticleCreationTool()">Article Creation Tool</button>
             </div>
             <div class="col">
-                <p id="footerLink" style="color:black;font-size: 36px;border:5px solid black;text-align:center;background-color: white;">Forum</p>
+                <button id="toggleForum" style="color:black;font-family:Bahnschrift; font-size: 36px;border:5px solid black;text-align:center;background-color: white; width: 400px;">Forum</button>
             </div>
         </div>
     </div>

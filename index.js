@@ -127,6 +127,7 @@ const init = () =>{
                 let animatedInfoGraphicContainer = document.createElement('div')
                 animatedInfoGraphicContainer.className = "container"
                 let animatedInfoGraphicImg = document.createElement('img')
+                //animatedInfoGraphicImg.style.height = "100px"
                 animatedInfoGraphicImg.src = animatedInfoGraphic
                 animatedInfoGraphicContainer.append(animatedInfoGraphicImg)
 
@@ -247,6 +248,95 @@ const init = () =>{
                 console.log(object)
             })
     })
+
+
+    /*****************************************
+     * Forum Tool
+     ******************************************/
+
+    let forumContainer = document.getElementById('forum')
+
+    forumContainer.style.display = "none"
+
+    fetch('http://localhost:3000/forumPosts')                                                                //Fetches the article objects in db.json
+    .then(function(res){
+        return res.json()
+    })
+    .then(function(object){
+        console.log(object)
+        object.forEach(function({userName,post}){
+            //alert(mainTitle)
+
+            const date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+            let currentDate =`${day}-${month}-${year}`;
+
+            let postContainer = document.createElement('div');
+            postContainer.className ='container-fluid';
+            postContainer.style.border = '3px solid black'
+
+            let postUserName = document.createElement('h6')
+            postUserName.innerText = `${userName} on ${currentDate}:`
+
+            let postContent = document.createElement('h4')
+            postContent.style.color = "black"
+            postContent.innerText = post
+            postContainer.append(postUserName,postContent)
+
+            forumContainer.append(postContainer)
+            
+        })
+    })
+
+    let toggleForum = document.getElementById('toggleForum')
+    
+    toggleForum.addEventListener('click', function(){
+        forumContainer.style.display = "block"
+    })
+
+    let postButton = document.getElementById('postButton')
+
+    postButton.addEventListener('submit', function(){
+        alert("post button clicked")
+        event.preventDefault()
+        let postUserName = document.getElementById('userName').value
+        let postContent= document.getElementById('postContent').value
+
+        alert(postUserName+ " is posting")
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth();
+        let year = date.getFullYear();
+        let currentDate =`${day}-${month}-${year}`;
+
+        let newPost = {
+            "userName": postUserName,
+            "post" : postContent
+        }
+
+        const patchConfigurationObject ={
+            method:"POST",
+            headers:{
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(newPost)
+        }
+
+        fetch("http://localhost:3000/forumPosts", patchConfigurationObject)
+            .then(function (res){
+                return res.json()
+            })
+            .then(function (object){
+                console.log(object)
+
+            })
+            location.reload()    
+    })
+
+    
     
 }
 

@@ -39,23 +39,42 @@
         {
           "title": "Platoon",
           "staticImage": "./assets/images/platoonWhite.svg",
-          "simplePoint": "The Second most Basic Unit in an army. 3 Sections with 30 men in total, led by a Lieutenant (Pronounced Left-Tenant in Commonwealth armies) and by Sergeants in the Wehrmacht. Again, a platoon is split with 2 sections designated for FLANKING and one (Equiped with heavy weapons) for PINNING"
+          "simplePoint": "The Second most Basic Unit in an army. 3 Sections with 30 men in total, led by a Lieutenant (Pronounced 'Left-Tenant' in Commonwealth armies) and by Sergeants in the Wehrmacht. Again, a platoon is split with 2 sections designated for FLANKING and one (Equiped with heavy weapons) for PINNING"
         }
       ],
       "id": 2
+    }
+  ],
+  "forumPosts": [
+    {
+      "id": 1,
+      "userName": "Kimani Mbatia",
+      "post": "Ok, the forum is up and running. Use the tool below to post your messages"
     },
     {
-      "mainTitle": "",
-      "creator": "",
-      "creationDate": "9-6-2023",
-      "mainPoints": [
-        {
-          "title": "",
-          "staticImage": "",
-          "simplePoint": ""
-        }
-      ],
+      "id": 2,
+      "userName": "Kimani Mbatia",
+      "post": "Feel Free to make enquiries"
+    },
+    {
+      "userName": "Admin",
+      "post": "Testing functionality",
       "id": 3
+    },
+    {
+      "userName": "Admin",
+      "post": "Testing still",
+      "id": 4
+    },
+    {
+      "userName": "Bot",
+      "post": "Bot",
+      "id": 5
+    },
+    {
+      "userName": "bot2",
+      "post": "bot2",
+      "id": 6
     }
   ]
 }
