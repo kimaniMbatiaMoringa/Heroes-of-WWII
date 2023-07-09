@@ -27,14 +27,19 @@
       ]
     },
     {
-      "mainTitle": "Kenyan Politics",
-      "creator": "Raila Odinga",
+      "mainTitle": "Military Organisation",
+      "creator": "Kimani Mbatia",
       "creationDate": "9-6-2023",
       "mainPoints": [
         {
-          "title": "Corruption under Ruto",
+          "title": "Section",
           "staticImage": "",
-          "simplePoint": "Finance Bill - Bought,"
+          "simplePoint": "The most Basic Unit in an army. Contains 10 men, led by a Corporal in Commonwealth armies and by Sergeants in others. Sections are split into 2 fireteams: 1 for PINNING down the enemy, and one for FLANKING"
+        },
+        {
+          "title": "Platoon",
+          "staticImage": "",
+          "simplePoint": "The Second most Basic Unit in an army. 3 Sections with 30 men in total, led by a Lieutenant (Pronounced Left-Tenant in Commonwealth armies) and by Sergeants in the Wehrmacht. Again, a platoon is split with 2 sections designated for FLANKING and one (Equiped with heavy weapons) for PINNING"
         }
       ],
       "id": 2
