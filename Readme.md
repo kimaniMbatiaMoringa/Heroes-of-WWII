@@ -1,7 +1,7 @@
 
 # Heroes of WWII - An Educational Tool (And Template) for the next generation
 
-By K Mbatia for moringa school
+By K Mbatia for Moringa School
 
 # Description
 
@@ -13,7 +13,7 @@ The goal is not necessarily content, but rather to provide a platform for expert
 
 Deliverables:
 
-1. A series of Articles that explain a history of the war.
+1. Two Articles with instructions for an expert on how to explain the history of the war.
 
 2. An article creation Tool for users to add their own articles
 
@@ -21,9 +21,9 @@ Deliverables:
 
 # Project Setup
 
-1. Download File on your computer
+1. Download the File on your computer
 
-2. Launch terminal within folder and type "json-server --watch db.json to start local json server
+2. Launch the terminal within the folder and type "json-server --watch db.json to start local json server
 
 3. Open index.html and view articles
 
