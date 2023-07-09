@@ -163,6 +163,16 @@ const init = () =>{
         AOS.init();
     })
 
+    let articleCreationTool = document.getElementById('articleCreationTool')
+
+    articleCreationTool.style.display = "none"
+
+    let toggleArticleCreationTool = document.getElementById('toggleArticleCreationTool')
+    
+    toggleArticleCreationTool.addEventListener('click', function(){
+        articleCreationTool.style.display = "block"
+    })
+
     let submitButton = document.getElementById('submitArticle')
     
     submitButton.addEventListener('click', function(){
