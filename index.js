@@ -51,7 +51,13 @@ const init = () =>{
             mainTitleDisplayText.style.color = "white"
             mainTitleDisplayText.innerText= object.mainTitle;
 
-            mainTitleDisplay.append(mainTitleDisplayText)
+            let authorDisplay = document.createElement('p');
+            authorDisplay.style.fontSize = "14px"
+            authorDisplay.style.textAlign ="center"
+            authorDisplay.style.color = "white"
+            authorDisplay.innerText= `By ${object.creator}`;
+
+            mainTitleDisplay.append(mainTitleDisplayText,authorDisplay)
             
             mainTitleDisplay.style.width = "auto"
 
@@ -192,7 +198,7 @@ const init = () =>{
 
     let submitButton = document.getElementById('submitArticle')
     
-    submitButton.addEventListener('click', function(){
+    submitButton.addEventListener('submit', function(){
         alert("submit button clicked")
         event.preventDefault()
         let newArticleName= document.getElementById('articleNameInput').value
