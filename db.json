@@ -38,6 +38,19 @@
         }
       ],
       "id": 2
+    },
+    {
+      "mainTitle": "",
+      "creator": "",
+      "creationDate": "9-6-2023",
+      "mainPoints": [
+        {
+          "title": "",
+          "staticImage": "",
+          "simplePoint": ""
+        }
+      ],
+      "id": 3
     }
   ]
 }
