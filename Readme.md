@@ -17,7 +17,7 @@ Deliverables:
 
 2. An article creation Tool for users to add their own articles
 
-3. A Forum for users to communicate with Admin and other users.
+3. A public forum for users to communicate.
 
 # Project Setup
 
